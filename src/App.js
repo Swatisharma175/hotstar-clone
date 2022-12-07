@@ -1,12 +1,12 @@
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
-import Carousel from "./components/carousel/Carousel";
+// import Carousel from "./components/carousel/Carousel";
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Carousel />
+      {/* <Carousel /> */}
     </div>
   );
 }

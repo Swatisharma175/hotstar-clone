@@ -13,17 +13,78 @@ const Navbar = () => {
         alt=""
       />
       <ul className="nav-links nav-responsive">
-        <li className="nav-items nav-responsive">
-          <a href="/">TV</a>
+        <li className="nav-items nav-responsive dropdown-box">
+          <button
+            className="btn btn-secondary dropdown-toggle dropdown-button"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            TV
+          </button>
+          <ul className="dropdown-menu" aria-labelledby="">
+            <li>Other Shows</li>
+            <li>Hotstar Specials</li>
+            <li>Star Plus</li>
+            <li>Star Vijay</li>
+            <li>Asianet</li>
+          </ul>
         </li>
-        <li className="nav-items nav-responsive">
-          <a href="/">movies</a>
+        <li className="nav-items nav-responsive dropdown-box">
+          <button
+            className="btn btn-secondary dropdown-toggle dropdown-button"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Movies
+          </button>
+          <ul className="dropdown-menu" aria-labelledby="">
+            <li>Hindi</li>
+            <li>Bengali</li>
+            <li>Telugu</li>
+            <li>Malayalam</li>
+            <li>Tamil</li>
+            <li>Kannada</li>
+          </ul>
         </li>
-        <li className="nav-items nav-responsive">
-          <a href="/">sports</a>
+        <li className="nav-items nav-responsive dropdown-box">
+          <button
+            className="btn btn-secondary dropdown-toggle dropdown-button"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Sports
+          </button>
+          <ul className="dropdown-menu" aria-labelledby="">
+            <li>Other Shows</li>
+            <li>Hotstar Specials</li>
+            <li>Star Plus</li>
+            <li>Star Vijay</li>
+            <li>Asianet</li>
+          </ul>
         </li>
-        <li className="nav-items nav-responsive">
-          <a href="/">disney+</a>
+        <li className="nav-items nav-responsive dropdown-box">
+          <button
+            className="btn btn-secondary dropdown-toggle dropdown-button"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Disney+
+          </button>
+          <ul className="dropdown-menu" aria-labelledby="">
+            <li>Other Shows</li>
+            <li>Hotstar Specials</li>
+            <li>Star Plus</li>
+            <li>Star Vijay</li>
+            <li>Asianet</li>
+          </ul>
         </li>
       </ul>
 

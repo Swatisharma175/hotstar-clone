@@ -10,7 +10,36 @@
   display: flex;
   align-items: center;
 }
+.dropdown-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.dropdown-toggle::after {
+  content: none;
+}
+.dropdown-box {
+  padding: 10px;
+}
+.dropdown-box:hover .dropdown-button {
+  background-color: transparent;
+}
+.dropdown-box:hover .dropdown-menu {
+  display: block;
+  margin-top: 0px;
+}
 
+li > .dropdown-menu {
+  padding: 10px;
+  /* margin: 10px; */
+  line-height: 40px;
+}
+.dropdown-menu {
+  margin-top: 5px;
+  background-color: rgb(23, 23, 50);
+  color: white;
+}
 .brand-logo {
   height: 35px;
 }
