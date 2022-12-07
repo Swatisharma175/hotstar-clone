@@ -1,4 +1,6 @@
 import React from "react";
+import "./Carousel.css";
+import { useEffect } from "react";
 
 const Carousel = () => {
   // const carousel = document.querySelector(".carousel");
@@ -31,74 +33,79 @@ const Carousel = () => {
     },
   ];
 
-  // let sliders = [];
+  useEffect(() => {
+    // code to run after render goes here
+    const carousel = document.querySelector(".carousel");
+    let sliders = [];
 
-  // let slideIndex = 0;
+    let slideIndex = 0;
 
-  // const createSlide = () => {
-  //   if (slideIndex >= movies.length) {
-  //     slideIndex = 0;
-  //   }
+    const createSlide = () => {
+      if (slideIndex >= movies.length) {
+        slideIndex = 0;
+      }
 
-  //   //creating DOM element
-  //   let slide = document.createElement("div");
-  //   let imgElement = document.createElement("img");
-  //   let content = document.createElement("div");
-  //   let h1 = document.createElement("h1");
-  //   let p = document.createElement("p");
+      //creating DOM element
+      let slide = document.createElement("div");
+      let imgElement = document.createElement("img");
+      let content = document.createElement("div");
+      let h1 = document.createElement("h1");
+      let p = document.createElement("p");
 
-  //   //attaching all the elements
-  //   imgElement.appendChild(document.createTextNode(""));
-  //   h1.appendChild(document.createTextNode(movies[slideIndex].name));
-  //   p.appendChild(document.createTextNode(movies[slideIndex].des));
-  //   content.appendChild(h1);
-  //   content.appendChild(p);
-  //   slide.appendChild(content);
-  //   slide.appendChild(imgElement);
-  //   carousel.appendChild(slide);
+      //attaching all the elements
+      imgElement.appendChild(document.createTextNode(""));
+      h1.appendChild(document.createTextNode(movies[slideIndex].name));
+      p.appendChild(document.createTextNode(movies[slideIndex].des));
+      content.appendChild(h1);
+      content.appendChild(p);
+      slide.appendChild(content);
+      slide.appendChild(imgElement);
+      carousel.appendChild(slide);
 
-  //   //setting up image
-  //   imgElement.src = movies[slideIndex].image;
-  //   slideIndex++;
+      //setting up image
+      imgElement.src = movies[slideIndex].image;
+      slideIndex++;
 
-  //   //setting elements classname
-  //   slide.className = "slider";
-  //   content.className = "slide-content";
-  //   h1.className = "movie-title";
-  //   p.className = "movie-des";
+      //setting elements classname
+      slide.className = "slider";
+      content.className = "slide-content";
+      h1.className = "movie-title";
+      p.className = "movie-des";
 
-  //   sliders.push(slide);
+      sliders.push(slide);
 
-  //   //adding sliding effect
-  //   if (sliders.length) {
-  //     sliders[0].style.marginLeft = `calc(-${100 * (sliders.length - 2)}% - ${
-  //       30 * (sliders.length - 2)
-  //     }px)`;
-  //   }
-  // };
+      //adding sliding effect
+      if (sliders.length) {
+        sliders[0].style.marginLeft = `calc(-${100 * (sliders.length - 2)}% - ${
+          30 * (sliders.length - 2)
+        }px)`;
+      }
+    };
 
-  // for (let i = 0; i < 3; i++) {
-  //   createSlide();
-  // }
+    for (let i = 0; i < 3; i++) {
+      createSlide();
+    }
 
-  // setInterval(() => {
-  //   createSlide();
-  // }, 3000);
+    setInterval(() => {
+      createSlide();
+    }, 5000);
+  });
 
   return (
     <div className="carousel-container">
       <div className="carousel">
-        <div className="slider">
+        {/* <div className="slider">
           <div className="slide-content">
-            <h1 className="movie-title">loki</h1>
+            <h1 className="movie-title">luca</h1>
             <p className="movie-des">
-              The mercurial villain Loki resumes his role as the God of Mischief
-              in a new series that takes place after the events of "Avengers
-              Endgame."
+              Set in a beautiful seaside town on the Italian Riviera, the
+              original animated feature is a coming-of-age story about one young
+              boy experiencing an unforgettable summer filled with gelato, pasta
+              and endless scooter rides.{" "}
             </p>
           </div>
-          <img src="../../images/slider 1.PNG" alt="" />
-        </div>
+          <img src="../../images/slider 5.PNG" alt="" />
+        </div> */}
       </div>
     </div>
   );
