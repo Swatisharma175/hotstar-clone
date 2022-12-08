@@ -1,12 +1,12 @@
 import React from "react";
-import "./trending.css";
+import "./popular.css";
 import { useEffect } from "react";
 
-const Trending = () => {
+const Popular = () => {
   useEffect(() => {
-    let cardContainer = document.querySelectorAll(".card-container")[1];
-    let preBtn = document.querySelectorAll(".pre-btn")[1];
-    let nxtBtn = document.querySelectorAll(".nxt-btn")[1];
+    let cardContainer = document.querySelectorAll(".card-container")[0];
+    let preBtn = document.querySelectorAll(".pre-btn")[0];
+    let nxtBtn = document.querySelectorAll(".nxt-btn")[0];
     let containerDimensions = cardContainer.getBoundingClientRect();
     let containerWidth = containerDimensions.width;
 
@@ -21,7 +21,7 @@ const Trending = () => {
 
   return (
     <div>
-      <h1 className="title">Latest & Trending</h1>
+      <h1 className="title">Popular Shows</h1>
 
       <div className="movies-list">
         <button className="pre-btn" title="btn">
@@ -144,4 +144,4 @@ const Trending = () => {
   );
 };
 
-export default Trending;
+export default Popular;

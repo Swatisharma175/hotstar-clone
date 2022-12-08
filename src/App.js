@@ -4,6 +4,7 @@ import Carousel from "./components/carousel/Carousel";
 import Slider from "./components/Slider/Slider";
 import VideoCard from "./components/video-cards/VideoCard";
 import Trending from "./components/trending/Trending";
+import Popular from "./components/popular/Popular";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Slider />
       <VideoCard />
       <Trending />
+      <Popular />
     </div>
   );
 }
