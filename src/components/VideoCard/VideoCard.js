@@ -1,5 +1,5 @@
 import React from "react";
-import "./videocard.css";
+import "./VideoCard.css";
 import { useEffect } from "react";
 
 const VideoCard = () => {

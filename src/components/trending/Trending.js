@@ -1,5 +1,5 @@
 import React from "react";
-import "./trending.css";
+import "./Trending.css";
 import { useEffect, useState } from "react";
 
 const Trending = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./recommended.css";
+import "./Recommended.css";
 import { useEffect, useState } from "react";
 
 const Recommended = () => {
