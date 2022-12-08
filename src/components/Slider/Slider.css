@@ -2,16 +2,15 @@
   height: 400px;
   float: right;
 }
-
-.carousel-image-box {
+/* .carousel-image-box {
   position: absolute;
   width: 100%;
   height: 100%;
-  /* box-shadow: inset 10em 0em rgb(225, 201, 21); */
-  /* border: 20px solid blue; */
+  box-shadow: inset 3px 3px 10px 0 #c65959;
+  border-radius: 20px;
   top: 0;
   left: 0;
-}
+} */
 .carousel-item {
   width: 100%;
 }

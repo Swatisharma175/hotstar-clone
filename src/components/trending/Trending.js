@@ -4,11 +4,14 @@ import { useEffect, useState } from "react";
 
 const Trending = () => {
   const [items, setItems] = useState([]);
+
+  // Urls For Fetching Data
   const trendingUri =
     "https://api.themoviedb.org/3/trending/movie/week?api_key=dbbabc4ba854dfe84597e635c79468d7";
   const imgUri = "https://image.tmdb.org/t/p/original/";
 
   useEffect(() => {
+    // API Call : GET Data
     fetch(trendingUri)
       .then((res) => res.json())
       .then(
@@ -58,7 +61,7 @@ const Trending = () => {
               />
               <div className="card-body">
                 <h2 className="name">{item.title}</h2>
-                <h6 className="des">{item.overview}</h6>
+                <h6 className="des">{item.overview.slice(0, 40)}...</h6>
                 <button className="watchlist-btn">+ Watchlist</button>
               </div>
             </div>
