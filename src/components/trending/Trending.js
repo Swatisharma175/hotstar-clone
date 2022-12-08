@@ -1,9 +1,27 @@
 import React from "react";
 import "./trending.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Trending = () => {
+  const [items, setItems] = useState([]);
+  const trendingUri =
+    "https://api.themoviedb.org/3/trending/movie/week?api_key=dbbabc4ba854dfe84597e635c79468d7";
+  const imgUri = "https://image.tmdb.org/t/p/original/";
+
   useEffect(() => {
+    fetch(trendingUri)
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          //   console.log(result);
+          setItems(result.results);
+          //   console.log(items);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+
     let cardContainer = document.querySelectorAll(".card-container")[1];
     let preBtn = document.querySelectorAll(".pre-btn")[1];
     let nxtBtn = document.querySelectorAll(".nxt-btn")[1];
@@ -31,113 +49,20 @@ const Trending = () => {
           <img src="/images/nxt.png" alt="" />
         </button>
         <div className="card-container">
-          <div className="card">
-            <img src="/images/poster 1.png" className="card-img" alt="" />
-            <div className="card-body">
-              <h2 className="name">movie name</h2>
-              <h6 className="des">Lorem ipsum dolor sit amet consectetur.</h6>
-              <button className="watchlist-btn">+ Watchlist</button>
+          {items.map((item) => (
+            <div className="card" key={item.id}>
+              <img
+                src={imgUri + item.poster_path}
+                className="card-img"
+                alt=""
+              />
+              <div className="card-body">
+                <h2 className="name">{item.title}</h2>
+                <h6 className="des">{item.overview}</h6>
+                <button className="watchlist-btn">+ Watchlist</button>
+              </div>
             </div>
-          </div>
-
-          <div className="card">
-            <img src="/images/poster 2.png" className="card-img" alt="" />
-            <div className="card-body">
-              <h2 className="name">movie name</h2>
-              <h6 className="des">Lorem ipsum dolor sit amet consectetur.</h6>
-              <button className="watchlist-btn">+ Watchlist</button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src="/images/poster 3.png" className="card-img" alt="" />
-            <div className="card-body">
-              <h2 className="name">movie name</h2>
-              <h6 className="des">Lorem ipsum dolor sit amet consectetur.</h6>
-              <button className="watchlist-btn">+ Watchlist</button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src="/images/poster 4.png" className="card-img" alt="" />
-            <div className="card-body">
-              <h2 className="name">movie name</h2>
-              <h6 className="des">Lorem ipsum dolor sit amet consectetur.</h6>
-              <button className="watchlist-btn">+ Watchlist</button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src="/images/poster 5.png" className="card-img" alt="" />
-            <div className="card-body">
-              <h2 className="name">movie name</h2>
-              <h6 className="des">Lorem ipsum dolor sit amet consectetur.</h6>
-              <button className="watchlist-btn">+ Watchlist</button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src="/images/poster 6.png" className="card-img" alt="" />
-            <div className="card-body">
-              <h2 className="name">movie name</h2>
-              <h6 className="des">Lorem ipsum dolor sit amet consectetur.</h6>
-              <button className="watchlist-btn">+ Watchlist</button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src="/images/poster 7.png" className="card-img" alt="" />
-            <div className="card-body">
-              <h2 className="name">movie name</h2>
-              <h6 className="des">Lorem ipsum dolor sit amet consectetur.</h6>
-              <button className="watchlist-btn">+ Watchlist</button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src="/images/poster 8.png" className="card-img" alt="" />
-            <div className="card-body">
-              <h2 className="name">movie name</h2>
-              <h6 className="des">Lorem ipsum dolor sit amet consectetur.</h6>
-              <button className="watchlist-btn">+ Watchlist</button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src="/images/poster 9.png" className="card-img" alt="" />
-            <div className="card-body">
-              <h2 className="name">movie name</h2>
-              <h6 className="des">Lorem ipsum dolor sit amet consectetur.</h6>
-              <button className="watchlist-btn">+ Watchlist</button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src="/images/poster 10.png" className="card-img" alt="" />
-            <div className="card-body">
-              <h2 className="name">movie name</h2>
-              <h6 className="des">Lorem ipsum dolor sit amet consectetur.</h6>
-              <button className="watchlist-btn">+ Watchlist</button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src="/images/poster 11.png" className="card-img" alt="" />
-            <div className="card-body">
-              <h2 className="name">movie name</h2>
-              <h6 className="des">Lorem ipsum dolor sit amet consectetur.</h6>
-              <button className="watchlist-btn">+ Watchlist</button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src="/images/poster 12.png" className="card-img" alt="" />
-            <div className="card-body">
-              <h2 className="name">movie name</h2>
-              <h6 className="des">Lorem ipsum dolor sit amet consectetur.</h6>
-              <button className="watchlist-btn">+ Watchlist</button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

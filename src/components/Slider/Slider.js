@@ -46,6 +46,7 @@ const Slider = () => {
                 className="w-60"
                 alt="..."
               />
+              <div className="carousel-image-box"></div>
             </div>
             <div className="carousel-content-box">
               <div className="carousel-content">
