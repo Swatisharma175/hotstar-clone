@@ -5,6 +5,7 @@ import Slider from "./components/Slider/Slider";
 import VideoCard from "./components/video-cards/VideoCard";
 import Trending from "./components/trending/Trending";
 import Popular from "./components/popular/Popular";
+import Recommended from "./components/recommended/Recommended";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <VideoCard />
       <Trending />
       <Popular />
+      <Recommended />
     </div>
   );
 }
