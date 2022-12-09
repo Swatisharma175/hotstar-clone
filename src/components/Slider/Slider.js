@@ -12,12 +12,13 @@ const Slider = () => {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <div className="carousel-image">
+            <div className="carousel-image-box">
               <img
                 src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/4453/1424453-h-838e7eb73942"
                 className="w-60"
                 alt="..."
               />
+              <div className="carousel-image-border-left"></div>
             </div>
             <div className="carousel-content-box">
               <div className="carousel-content">
@@ -34,13 +35,13 @@ const Slider = () => {
           </div>
 
           <div className="carousel-item">
-            <div className="carousel-image">
+            <div className="carousel-image-box">
               <img
                 src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/4248/1364248-h-04994afb88d4"
                 className="w-60"
                 alt="..."
               />
-              <div className="carousel-image-box"></div>
+              <div className="carousel-image-border-left"></div>
             </div>
             <div className="carousel-content-box">
               <div className="carousel-content">
