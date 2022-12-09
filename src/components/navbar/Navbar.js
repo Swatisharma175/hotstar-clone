@@ -3,11 +3,29 @@ import "./Navbar.css";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <i
-        className="fa-solid fa-bars menu-icon"
-        href="https://www.google.co.in"
-        target="_blank"
-      />
+      <div className="dropdown-box">
+        <button
+          className="btn btn-secondary dropdown-toggle dropdown-button"
+          type="button"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i className="fa-solid fa-bars menu-icon" />
+        </button>
+        <ul className="dropdown-menu toggle-dropdown" aria-labelledby="">
+          <li className="menu-list">
+            <i class="fa-solid fa-tv menu-icon-inner" />
+            Channel
+          </li>
+          <li className="menu-list">
+            <i class="fa-solid fa-language menu-icon-inner" /> Language
+          </li>
+          <li className="menu-list">
+            <i class="fa-solid fa-shield-heart menu-icon-inner" /> Genres
+          </li>
+        </ul>
+      </div>
       <img
         src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
         alt=""

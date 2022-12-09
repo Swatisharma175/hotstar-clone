@@ -1,12 +1,14 @@
 import React from "react";
 import "./Recommended.css";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Recommended = () => {
   const [items, setItems] = useState([]);
   const recommendedUri =
-    "https://api.themoviedb.org/3/trending/all/day?api_key=dbbabc4ba854dfe84597e635c79468d7";
+    "https://api.themoviedb.org/3/trending/movie/day?api_key=dbbabc4ba854dfe84597e635c79468d7";
   const imgUri = "https://image.tmdb.org/t/p/original/";
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(recommendedUri)
@@ -50,7 +52,13 @@ const Recommended = () => {
         </button>
         <div className="card-container">
           {items.map((item) => (
-            <div className="card" key={item.id}>
+            <div
+              className="card"
+              key={item.id}
+              onClick={(navigateTo) => {
+                navigate(`/movie/${item.id}`);
+              }}
+            >
               <img
                 src={imgUri + item.poster_path}
                 className="card-img"

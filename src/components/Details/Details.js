@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./Details.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Details = () => {
   const [items, setItems] = useState({});
   const [moreItems, setMoreItems] = useState([]);
   const { pathname: params } = useLocation();
   const [, type, id] = params.split("/");
+  const navigate = useNavigate();
   let name = "";
   let description = "";
   let imageUrl = "https://image.tmdb.org/t/p/original/";
@@ -14,7 +15,7 @@ const Details = () => {
   console.log(type, id);
   let uri = "";
   const moreUri =
-    "https://api.themoviedb.org/3/trending/all/day?api_key=dbbabc4ba854dfe84597e635c79468d7";
+    "https://api.themoviedb.org/3/trending/movie/day?api_key=dbbabc4ba854dfe84597e635c79468d7";
 
   const movieCall = (id) => {
     uri = `https://api.themoviedb.org/3/movie/${id}?api_key=dbbabc4ba854dfe84597e635c79468d7&language=en-US`;
@@ -73,9 +74,8 @@ const Details = () => {
     preBtn.addEventListener("click", () => {
       cardContainer.scrollLeft -= containerWidth + 200;
     });
-
     // eslint-disable-next-line
-  }, []);
+  }, [params]);
 
   console.log(items);
   if (type === "movie") {
@@ -117,9 +117,14 @@ const Details = () => {
             <img src="/images/nxt.png" alt="" />
           </button>
           <div className="card-container">
-            {console.log(moreItems)}
             {moreItems.map((item) => (
-              <div className="card" key={item.id}>
+              <div
+                className="card"
+                key={item.id}
+                onClick={(navigateTo) => {
+                  navigate(`/movie/${item.id}`);
+                }}
+              >
                 <img
                   src={moreImageUrl + item.poster_path}
                   className="card-img"

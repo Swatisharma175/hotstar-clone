@@ -1,9 +1,11 @@
 import React from "react";
 import "./Trending.css";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Trending = () => {
   const [items, setItems] = useState([]);
+  const navigate = useNavigate();
 
   // Urls For Fetching Data
   const trendingUri =
@@ -53,7 +55,13 @@ const Trending = () => {
         </button>
         <div className="card-container">
           {items.map((item) => (
-            <div className="card" key={item.id}>
+            <div
+              className="card"
+              key={item.id}
+              onClick={(navigateTo) => {
+                navigate(`/movie/${item.id}`);
+              }}
+            >
               <img
                 src={imgUri + item.poster_path}
                 className="card-img"

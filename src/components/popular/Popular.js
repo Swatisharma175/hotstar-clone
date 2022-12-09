@@ -1,9 +1,11 @@
 import React from "react";
 import "./Popular.css";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Popular = () => {
   const [items, setItems] = useState([]);
+  const navigate = useNavigate();
 
   const popularUri =
     "https://api.themoviedb.org/3/trending/tv/week?api_key=dbbabc4ba854dfe84597e635c79468d7";
@@ -51,7 +53,13 @@ const Popular = () => {
         </button>
         <div className="card-container">
           {items.map((item) => (
-            <div className="card" key={item.id}>
+            <div
+              className="card"
+              key={item.id}
+              onClick={(navigateTo) => {
+                navigate(`/tv/${item.id}`);
+              }}
+            >
               <img
                 src={imgUri + item.poster_path}
                 className="card-img"

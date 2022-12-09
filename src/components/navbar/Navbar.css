@@ -9,6 +9,15 @@
   z-index: 9;
   display: flex;
   align-items: center;
+  text-align: center;
+}
+.menu-icon-inner {
+  color: rgb(170, 161, 161);
+  padding: 10px;
+  /* background-color: white; */
+}
+li {
+  font-size: 12px;
 }
 .dropdown-button {
   margin: 0;
@@ -22,6 +31,13 @@
 .dropdown-box {
   padding: 10px;
 }
+.menu-list:hover {
+  background-color: black;
+}
+.menu-list:hover .menu-icon-inner {
+  color: rgb(255, 255, 255);
+}
+
 .dropdown-box:hover .dropdown-button {
   background-color: transparent;
 }
@@ -37,7 +53,8 @@ li > .dropdown-menu {
 }
 .dropdown-menu {
   margin-top: 5px;
-  background-color: rgba(23, 23, 50, 1);
+  /* background-color: rgba(23, 23, 50, 1); */
+  background-color: #192133;
   color: white;
 }
 .brand-logo {
