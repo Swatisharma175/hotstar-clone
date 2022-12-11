@@ -1,9 +1,9 @@
 import React from "react";
 import "./Home.css";
 import Slider from "../Slider/Slider";
-import Popular from "../Popular/Popular";
-import Recommended from "../Recommended/Recommended";
-import Trending from "../Trending/Trending";
+import Popular from "../Populars/Populars";
+import Recommended from "../Recommendation/Recommendation";
+import Trending from "../Trendings/Trendings";
 import VideoCard from "../VideoCard/VideoCard";
 
 const Home = () => {

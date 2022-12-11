@@ -1,5 +1,5 @@
 import React from "react";
-import "./Popular.css";
+import "./Populars.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 

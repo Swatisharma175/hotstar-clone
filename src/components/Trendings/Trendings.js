@@ -1,17 +1,20 @@
 import React from "react";
-import "./Recommended.css";
+import "./Trendings.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Recommended = () => {
+const Trending = () => {
   const [items, setItems] = useState([]);
-  const recommendedUri =
-    "https://api.themoviedb.org/3/trending/movie/day?api_key=dbbabc4ba854dfe84597e635c79468d7";
-  const imgUri = "https://image.tmdb.org/t/p/original/";
   const navigate = useNavigate();
 
+  // Urls For Fetching Data
+  const trendingUri =
+    "https://api.themoviedb.org/3/trending/movie/week?api_key=dbbabc4ba854dfe84597e635c79468d7";
+  const imgUri = "https://image.tmdb.org/t/p/original/";
+
   useEffect(() => {
-    fetch(recommendedUri)
+    // API Call : GET Data
+    fetch(trendingUri)
       .then((res) => res.json())
       .then(
         (result) => {
@@ -24,9 +27,9 @@ const Recommended = () => {
         }
       );
 
-    let cardContainer = document.querySelectorAll(".card-container")[2];
-    let preBtn = document.querySelectorAll(".pre-btn")[2];
-    let nxtBtn = document.querySelectorAll(".nxt-btn")[2];
+    let cardContainer = document.querySelectorAll(".card-container")[1];
+    let preBtn = document.querySelectorAll(".pre-btn")[1];
+    let nxtBtn = document.querySelectorAll(".nxt-btn")[1];
     let containerDimensions = cardContainer.getBoundingClientRect();
     let containerWidth = containerDimensions.width;
 
@@ -41,7 +44,7 @@ const Recommended = () => {
 
   return (
     <div>
-      <h1 className="title">Recommended For You</h1>
+      <h1 className="title">Latest & Trending</h1>
 
       <div className="movies-list">
         <button className="pre-btn" title="btn">
@@ -65,7 +68,7 @@ const Recommended = () => {
                 alt=""
               />
               <div className="card-body">
-                <h2 className="name">{item.name}</h2>
+                <h2 className="name">{item.title}</h2>
                 <h6 className="des">{item.overview.slice(0, 40)}...</h6>
                 <button className="watchlist-btn">+ Watchlist</button>
               </div>
@@ -77,4 +80,4 @@ const Recommended = () => {
   );
 };
 
-export default Recommended;
+export default Trending;
