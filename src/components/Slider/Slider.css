@@ -3,7 +3,7 @@
   float: right;
 }
 .carousel-inner {
-  background-color: black;
+  background-color: #030b17;
 }
 .carousel-image-border-left {
   height: 400px;
@@ -16,11 +16,17 @@
   border-right: none;
   opacity: 1;
   border-color: transparent;
-  border-image-source: linear-gradient(to right, #000402, transparent);
+  border-image-source: linear-gradient(to right, #030b17, transparent);
+}
+
+.carousel {
+  padding: 20px;
+  border-radius: 10px;
 }
 .carousel-item {
   width: 100%;
   background-color: transparent;
+  /* padding: 20px; */
 }
 .carousel-inner > .carousel-item > .carousel-content-box {
   padding: 40px;
@@ -39,4 +45,17 @@
 }
 .carousel {
   padding-top: 80px;
+}
+.content-title {
+  padding-left: 50px;
+  text-transform: capitalize;
+  margin-top: 80px;
+}
+
+.content-des {
+  width: 80%;
+  line-height: 30px;
+  padding-left: 50px;
+  margin-top: 30px;
+  opacity: 0.8;
 }

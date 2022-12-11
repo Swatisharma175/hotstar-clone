@@ -14,7 +14,7 @@ const Slider = () => {
           <div className="carousel-item active">
             <div className="carousel-image-box">
               <img
-                src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/4453/1424453-h-838e7eb73942"
+                src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/5681/1415681-h-d4156275b3b3"
                 className="w-60"
                 alt="..."
               />
@@ -22,19 +22,17 @@ const Slider = () => {
             </div>
             <div className="carousel-content-box">
               <div className="carousel-content">
-                Crayon Shin-chan (Japanese: クレヨンしんちゃん, Hepburn: Kureyon
-                Shin-chan), is a Japanese manga series written and illustrated
-                by Yoshito Usui. Crayon Shin-chan made its first appearance in
-                1990 in a Japanese weekly magazine called Weekly Manga Action,
-                which was published by Futabasha. Due to the death of author
-                Yoshito Usui, the manga in its original form ended on September
-                11, 2009. A new manga began in the summer of 2010 by members of
-                Usui's team,[5] titled New Crayon Shin-chan
+                <h1 className="content-title">Sita Ram</h1>
+                <p className="content-des">
+                  On a letter-delivering task, Afreen learns of a 20-year-old
+                  romance set amidst a war. Her quest to trace the lovers makes
+                  her embrace humanity beyond borders.
+                </p>
               </div>
             </div>
           </div>
 
-          <div className="carousel-item">
+          <div className="carousel-item ">
             <div className="carousel-image-box">
               <img
                 src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/4248/1364248-h-04994afb88d4"
@@ -45,14 +43,12 @@ const Slider = () => {
             </div>
             <div className="carousel-content-box">
               <div className="carousel-content">
-                Crayon Shin-chan (Japanese: クレヨンしんちゃん, Hepburn: Kureyon
-                Shin-chan), is a Japanese manga series written and illustrated
-                by Yoshito Usui. Crayon Shin-chan made its first appearance in
-                1990 in a Japanese weekly magazine called Weekly Manga Action,
-                which was published by Futabasha. Due to the death of author
-                Yoshito Usui, the manga in its original form ended on September
-                11, 2009. A new manga began in the summer of 2010 by members of
-                Usui's team,[5] titled New Crayon Shin-chan
+                <h1 className="content-title">Anupama</h1>
+                <p className="content-des">
+                  Despite the many challenges thrown her way, Anupama begins a
+                  new chapter of her life post-divorce. Head held always high,
+                  what's waiting for her next?r
+                </p>
               </div>
             </div>
           </div>
@@ -67,14 +63,12 @@ const Slider = () => {
             </div>
             <div className="carousel-content-box">
               <div className="carousel-content">
-                Crayon Shin-chan (Japanese: クレヨンしんちゃん, Hepburn: Kureyon
-                Shin-chan), is a Japanese manga series written and illustrated
-                by Yoshito Usui. Crayon Shin-chan made its first appearance in
-                1990 in a Japanese weekly magazine called Weekly Manga Action,
-                which was published by Futabasha. Due to the death of author
-                Yoshito Usui, the manga in its original form ended on September
-                11, 2009. A new manga began in the summer of 2010 by members of
-                Usui's team,[5] titled New Crayon Shin-chan
+                <h1 className="content-title">Freddy</h1>
+                <p className="content-des">
+                  Dr. Freddy Ginwala is a shy and socially awkward dentist in
+                  Mumbai. He goes on multiple dates with women, only to get
+                  rejected everytime.
+                </p>
               </div>
             </div>
           </div>
@@ -89,14 +83,14 @@ const Slider = () => {
             </div>
             <div className="carousel-content-box">
               <div className="carousel-content">
-                Crayon Shin-chan (Japanese: クレヨンしんちゃん, Hepburn: Kureyon
-                Shin-chan), is a Japanese manga series written and illustrated
-                by Yoshito Usui. Crayon Shin-chan made its first appearance in
-                1990 in a Japanese weekly magazine called Weekly Manga Action,
-                which was published by Futabasha. Due to the death of author
-                Yoshito Usui, the manga in its original form ended on September
-                11, 2009. A new manga began in the summer of 2010 by members of
-                Usui's team,[5] titled New Crayon Shin-chan
+                <h1 className="content-title">Monster</h1>
+                <p className="content-des">
+                  Bhamini and Anil Chandra are a married couple who have a
+                  daughter named Kunjatta from Anil's first wife, and live a
+                  happy life with their caretaker Durga. Anil, who used to be a
+                  software engineer but was fired from his company, becomes a
+                  taxi driver to survive.
+                </p>
               </div>
             </div>
           </div>
@@ -111,14 +105,13 @@ const Slider = () => {
             </div>
             <div className="carousel-content-box">
               <div className="carousel-content">
-                Crayon Shin-chan (Japanese: クレヨンしんちゃん, Hepburn: Kureyon
-                Shin-chan), is a Japanese manga series written and illustrated
-                by Yoshito Usui. Crayon Shin-chan made its first appearance in
-                1990 in a Japanese weekly magazine called Weekly Manga Action,
-                which was published by Futabasha. Due to the death of author
-                Yoshito Usui, the manga in its original form ended on September
-                11, 2009. A new manga began in the summer of 2010 by members of
-                Usui's team,[5] titled New Crayon Shin-chan
+                <h1 className="content-title">Chhichhore</h1>
+                <p className="content-des">
+                  Anirudh "Anni" Pathak is a divorced middle-aged man living
+                  with his teenage son Raghav Pathak, an aspiring engineer, who
+                  is awaiting the results of his entrance examination in the
+                  hope of enrolling in the Indian Institute of Technology.
+                </p>
               </div>
             </div>
           </div>

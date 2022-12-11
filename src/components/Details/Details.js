@@ -96,7 +96,7 @@ const Details = () => {
   return (
     <div>
       <div className="carousel-container">
-        <div className="carousel">
+        <div className="carousel-inner-container">
           <div className="slider">
             <div className="slide-content">
               <h1 className="movie-title">{name}</h1>

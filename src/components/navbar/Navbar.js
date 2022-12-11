@@ -71,14 +71,20 @@ const Navbar = () => {
         </button>
         <ul className="dropdown-menu toggle-dropdown" aria-labelledby="">
           <li className="menu-list">
-            <i className="fa-solid fa-tv menu-icon-inner" />
-            Channel
+            <Link to="/channel">
+              <i className="fa-solid fa-tv menu-icon-inner" />
+              Channel
+            </Link>
           </li>
           <li className="menu-list">
-            <i className="fa-solid fa-language menu-icon-inner" /> Language
+            <Link to="/language">
+              <i className="fa-solid fa-language menu-icon-inner" /> Language
+            </Link>
           </li>
           <li className="menu-list">
-            <i className="fa-solid fa-shield-heart menu-icon-inner" /> Genres
+            <Link to="/genres">
+              <i className="fa-solid fa-shield-heart menu-icon-inner" /> Genres
+            </Link>
           </li>
         </ul>
       </div>
