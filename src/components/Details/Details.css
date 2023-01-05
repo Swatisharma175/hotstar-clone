@@ -63,3 +63,8 @@
 .fit {
   height: 100vh;
 }
+@media only screen and (max-width: 980px) {
+ .movie-des{
+  display: none;
+ }
+}

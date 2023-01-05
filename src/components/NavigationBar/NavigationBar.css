@@ -202,4 +202,7 @@ li > .dropdown-menu {
   .nav-responsive {
     display: none;
   }
+  .right-container{
+    display: none;
+  }
 }
