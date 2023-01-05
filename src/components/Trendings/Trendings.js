@@ -27,9 +27,9 @@ const Trending = () => {
         }
       );
 
-    let cardContainer = document.querySelectorAll(".card-container")[1];
-    let preBtn = document.querySelectorAll(".pre-btn")[1];
-    let nxtBtn = document.querySelectorAll(".nxt-btn")[1];
+    let cardContainer = document.querySelectorAll(".card-container")[0];
+    let preBtn = document.querySelectorAll(".pre-btn")[0];
+    let nxtBtn = document.querySelectorAll(".nxt-btn")[0];
     let containerDimensions = cardContainer.getBoundingClientRect();
     let containerWidth = containerDimensions.width;
 
