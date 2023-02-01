@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./NavigationBar.css";
 const Navbar = () => {
+  let timer;
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
   const [final, setFinal] = useState([]);
@@ -26,30 +27,26 @@ const Navbar = () => {
       );
   }, []);
 
-  // console.log(items);
-
   const search = (event) => {
-    // const searchBox = document.querySelector(".search-box");
-    // console.log(searchBox);
-    const searchResults = document.querySelector(".search-results");
-    console.log(event.target.value);
-    if (event.target.value === "") {
-      if (!searchResults.classList.contains("hidden")) {
-        searchResults.classList.add("hidden");
-      }
-    } else {
-      if (searchResults.classList.contains("hidden"))
-        searchResults.classList.remove("hidden");
-      const result = [];
-      items.forEach((item) => {
-        if (
-          item.title.toLowerCase().includes(event.target.value.toLowerCase())
-        ) {
-          result.push(item);
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(() => {
+      const searchResults = document.querySelector(".search-results");
+
+      if (event.target.value === "") {
+        if (!searchResults.classList.contains("hidden")) {
+          searchResults.classList.add("hidden");
         }
+      } else {
+        if (searchResults.classList.contains("hidden"))
+          searchResults.classList.remove("hidden");
+        const result = items
+          .filter((item) =>
+            item.title.toLowerCase().includes(event.target.value.toLowerCase())
+          )
+          .slice(0, 5);
         setFinal(result);
-      });
-    }
+      }
+    }, 500);
   };
 
   const searchClick = () => {
@@ -187,26 +184,26 @@ const Navbar = () => {
         <a href="/" className="login-link">
           login
         </a>
-        <div className="search-results hidden">
-          {final.map((searchList) => (
-            <div className="outerbox">
-              <Link to={"/movie/" + searchList.id} onClick={searchClick}>
-                <div className="search-dropdown-menu">
-                  <div className="search-dropdown-img">
-                    <img
-                      className="searchImages"
-                      src={imgUri + searchList.poster_path}
-                      alt={searchList.title}
-                    />
-                  </div>
-                  <div className="search-dropdown-title">
-                    <h6>{searchList.title}</h6>
-                  </div>
+      </div>
+      <div className="search-results hidden">
+        {final.map((searchList) => (
+          <div className="outerbox">
+            <Link to={"/movie/" + searchList.id} onClick={searchClick}>
+              <div className="search-dropdown-menu">
+                <div className="search-dropdown-img">
+                  <img
+                    className="searchImages"
+                    src={imgUri + searchList.poster_path}
+                    alt={searchList.title}
+                  />
                 </div>
-              </Link>
-            </div>
-          ))}
-        </div>
+                <div className="search-dropdown-title">
+                  <h6>{searchList.title}</h6>
+                </div>
+              </div>
+            </Link>
+          </div>
+        ))}
       </div>
     </nav>
   );
